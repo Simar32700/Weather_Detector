@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background: #101820;
+}
+
+#worldpic {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('worldpic.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#blackpic {
+    color: #ffffff;
+    text-align: center;
+    height: 55vh;
+    width: 55vw;
+    background: rgba(20, 20, 20, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+h3, .weather-data {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.sel{
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 12px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    color: #333;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+select:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+}
+
+select:focus {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    background: rgba(255, 255, 255, 1);
+}
+
+.weather-table {
+    margin-top: 20px;
+    width: 90%;
+    color: #f5f5f5;
+    border-collapse: collapse;
+}
+
+.weather-table th,
+.weather-table td {
+    padding: 12px;
+    text-align: center;
+    font-weight: 400;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.weather-table th {
+    font-weight: 700;
+    color: #e0e0e0;
+    font-size: 1em;
+}
